@@ -1,4 +1,7 @@
-# atlantis.yaml
 version: 3
+abort_on_execution_order_fail: true
 projects:
-- dir: .
+  - name: default
+    dir: .
+    autoplan:
+      when_modified: [ "*.tf", "*.tfvars" ]
